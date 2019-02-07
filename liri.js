@@ -133,14 +133,13 @@ break;
 // //////////////////////////////////////////////////////////////////////////
 // /// SPOTIFY //////////////////////////////////////////////////////////////
 
-case "spotify-this":
+case "spotify-this-song":
 
 require("dotenv").config();
 var keys = require("./keys.js");
 var fs = require("fs"); //connect random.txt for 'spotify this song'
 //var liri = require("./liri.js");
 var Spotify = require("node-spotify-api");
-
 var spotify = new Spotify (keys.spotify);
 
  spotifySearch = function(concatSearchTitle) {
@@ -170,6 +169,7 @@ var spotify = new Spotify (keys.spotify);
             console.log("");
             console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
             console.log("");
+            // console.log(data);
         });
     })
 }
@@ -180,7 +180,6 @@ var spotify = new Spotify (keys.spotify);
             query:"Ace of Base"
         }, 
     function(error, data) {
-
         if(error) {
             return console.log('Error occurred: ' + error);
         }
@@ -203,7 +202,7 @@ var spotify = new Spotify (keys.spotify);
         query: concatSearchTitle
     },
     function(error, data) {
-        
+
         if(error) {
             return console.log('Error occurred: ' + error);
         }

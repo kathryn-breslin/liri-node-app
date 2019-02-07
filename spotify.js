@@ -3,7 +3,7 @@
 require("dotenv").config();
 var keys = require("./keys.js");
 var fs = require("fs"); //connect random.txt for 'spotify this song'
-//var liri = require("./liri.js");
+// var liri = require("./liri.js");
 var Spotify = require("node-spotify-api");
 
 var spotify = new Spotify (keys.spotify);
@@ -25,16 +25,17 @@ var spotify = new Spotify (keys.spotify);
             if(error) {
                 return console.log("Error occurred: " + error);
             }
-            console.log("");
-            console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            console.log("");
-            console.log("Song Name: ",data.tracks.items[0].name);
-            console.log("Album Name: ",data.tracks.items[0].album.name);
-            console.log("Artist Name: ",data.tracks.items[0].artists[0].name);
-            console.log("Preview of Song: ",data.tracks.items[0].preview_url);
-            console.log("");
-            console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            console.log("");
+            // console.log("");
+            // console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            // console.log("");
+            // console.log("Song Name: ",data.tracks.items[0].name);
+            // console.log("Album Name: ",data.tracks.items[0].album.name);
+            // console.log("Artist Name: ",data.tracks.items[0].artists[0].name);
+            // console.log("Preview of Song: ",data.tracks.items[0].preview_url);
+            // console.log("");
+            // console.log("+++++++++++++++++++++++++++++++++++++++++++++++++++++");
+            // console.log("");
+            console.log(data);
         });
     })
 }
